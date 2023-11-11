@@ -17,7 +17,7 @@ const BallotComponent = ({ address }) => {
           },
         }
       );
-      console.log(process.env.REACT_APP_API_KEY);
+      console.log(secrets.REACT_APP_API_KEY);
       console.log(response.data);
       setVoterInfo(response.data);
     } catch (error) {

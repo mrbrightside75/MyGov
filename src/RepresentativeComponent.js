@@ -11,7 +11,7 @@ const RepresentativeComponent = ({ address }) => {
         "https://www.googleapis.com/civicinfo/v2/representatives",
         {
           params: {
-            key: process.env.REACT_APP_API_KEY,
+            key: secrets.REACT_APP_API_KEY,
             address,
           },
         }
