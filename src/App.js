@@ -6,8 +6,7 @@ import MyGovernment from "./MyGovernment";
 import MyRep from "./MyRep";
 import MyBallot from "./MyBallot";
 
-// Define your routes
-const routes = [
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Login />,
@@ -28,10 +27,7 @@ const routes = [
     path: "/myballot",
     element: <MyBallot />,
   },
-];
-
-// Create a router with the basename set to your repository name
-const router = createBrowserRouter(routes, { basename: "/MyGov" });
+]);
 
 function App() {
   return (
