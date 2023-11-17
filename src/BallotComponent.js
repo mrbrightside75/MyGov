@@ -9,15 +9,11 @@ const BallotComponent = ({ address }) => {
   const fetchVoterInfo = async () => {
     try {
       const response = await axios.get(
-        "https://www.googleapis.com/civicinfo/v2/voterinfo",
+        `https://mygov-back-end.fly.dev/api/voterinfo`,
         {
-          params: {
-            key: api_Key,
-            voter_key: address, // Use the address prop as the value for voter_key
-          },
+          params: { address }, // Use the address prop as the value for voter_key
         }
       );
-      console.log(secrets.REACT_APP_API_KEY);
       console.log(response.data);
       setVoterInfo(response.data);
     } catch (error) {
@@ -26,7 +22,9 @@ const BallotComponent = ({ address }) => {
   };
 
   useEffect(() => {
-    fetchVoterInfo();
+    if (address) {
+      fetchVoterInfo();
+    }
   }, [address]);
 
   const getPartyClass = (party) => {

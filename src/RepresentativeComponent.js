@@ -7,13 +7,11 @@ const RepresentativeComponent = ({ address }) => {
 
   const fetchCivicInfo = async () => {
     try {
+      // Updated the API endpoint to backend server's endpoint
       const response = await axios.get(
-        "https://www.googleapis.com/civicinfo/v2/representatives",
+        `https://mygov-back-end.fly.dev/api/representatives`,
         {
-          params: {
-            key: secrets.REACT_APP_API_KEY,
-            address,
-          },
+          params: { address },
         }
       );
       console.log(response.data);
@@ -24,7 +22,9 @@ const RepresentativeComponent = ({ address }) => {
   };
 
   useEffect(() => {
-    fetchCivicInfo();
+    if (address) {
+      fetchCivicInfo();
+    }
   }, [address]);
 
   const getPartyClass = (party) => {
@@ -39,38 +39,13 @@ const RepresentativeComponent = ({ address }) => {
 
   const renderRepresentative = () => {
     if (!civicInfo || !civicInfo.offices) return "Loading...";
-    //Original render with a new card for every office
-    // return (
-    //   <div>
-    //     {civicInfo.offices.map((office, index) => (
-    //       <div id="representativeCard" key={index}>
-    //         <h2 id="officeName">{office.name}</h2>
-    //         {office.officialIndices &&
-    //           office.officialIndices.map((officialIndex) => {
-    //             const official = civicInfo.officials[officialIndex];
-    //             const partyClass = getPartyClass(official.party); // Get the CSS class for this official's party
-    //             return (
-    //               <div key={officialIndex}>
-    //                 <p id="officialName">{official.name}</p>
-    //                 <p id="officialParty" className={partyClass}>
-    //                   {official.party}
-    //                 </p>
-    //               </div>
-    //             );
-    //           })}
-    //       </div>
-    //     ))}
-    //   </div>
-    // );
-
-    //New render with a new card for every Official
 
     return (
       <div>
         {civicInfo &&
           civicInfo.officials.map((official, index) => {
-            const office = civicInfo.offices.find((office) =>
-              office.officialIndices.includes(index)
+            const office = civicInfo.offices.find((o) =>
+              o.officialIndices.includes(index)
             );
             const partyClass = getPartyClass(official.party);
             return (
