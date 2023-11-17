@@ -28,7 +28,7 @@ const RepresentativeComponent = ({ address }) => {
   // }, [address]);
 
   useEffect(() => {
-    fetchVoterInfo();
+    fetchCivicInfo();
   }, [address]);
 
   const getPartyClass = (party) => {
