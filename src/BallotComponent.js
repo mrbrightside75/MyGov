@@ -21,10 +21,14 @@ const BallotComponent = ({ address }) => {
     }
   };
 
+  // useEffect(() => {
+  //   if (address) {
+  //     fetchVoterInfo();
+  //   }
+  // }, [address]);
+
   useEffect(() => {
-    if (address) {
-      fetchVoterInfo();
-    }
+    fetchVoterInfo();
   }, [address]);
 
   const getPartyClass = (party) => {
