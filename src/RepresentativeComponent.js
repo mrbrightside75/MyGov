@@ -8,7 +8,7 @@ const RepresentativeComponent = ({ address }) => {
   const fetchCivicInfo = async () => {
     try {
       // Updated the API endpoint to backend server's endpoint
-      const response = await axios.get(`https://mygov-back-end.fly.dev`, {
+      const response = await axios.get(`/api/representatives`, {
         params: { address },
       });
       console.log(response.data);
