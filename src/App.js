@@ -7,10 +7,10 @@ import MyRep from "./MyRep";
 import MyBallot from "./MyBallot";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Login />,
-  },
+  // {
+  //   path: "/",
+  //   element: <Login />,
+  // },
   {
     path: "/dashboard",
     element: <Dashboard />,
