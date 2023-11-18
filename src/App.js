@@ -9,7 +9,7 @@ import MyBallot from "./MyBallot";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Login />,
+    element: <Dashboard />,
   },
   {
     path: "/dashboard",
