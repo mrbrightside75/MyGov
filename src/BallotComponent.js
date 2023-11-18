@@ -5,15 +5,12 @@ import "./BallotComponent.css";
 const BallotComponent = ({ address }) => {
   // Accept the address prop here
   const [voterInfo, setVoterInfo] = useState(null);
-  const api_Key = process.env.REACT_APP_API_KEY;
+  const api_Key = process.env.GOOGLE_CIVIC_API_KEY;
   const fetchVoterInfo = async () => {
     try {
-      const response = await axios.get(
-        `https://mygov-back-end.fly.dev/api/voterinfo`,
-        {
-          params: { address }, // Use the address prop as the value for voter_key
-        }
-      );
+      const response = await axios.get(`/api/voterinfo`, {
+        params: { address, key: api_Key }, // Use the address prop as the value for voter_key
+      });
       console.log(response.data);
       setVoterInfo(response.data);
     } catch (error) {

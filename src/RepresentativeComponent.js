@@ -4,16 +4,13 @@ import "./RepresentativeComponent.css";
 
 const RepresentativeComponent = ({ address }) => {
   const [civicInfo, setCivicInfo] = useState(null);
-
+  // const api_Key = process.env.GOOGLE_CIVIC_API_KEY;
   const fetchCivicInfo = async () => {
     try {
       // Updated the API endpoint to backend server's endpoint
-      const response = await axios.get(
-        `https://mygov-back-end.fly.dev/api/representatives`,
-        {
-          params: { address },
-        }
-      );
+      const response = await axios.get(`/api/representatives`, {
+        params: { address },
+      });
       console.log(response.data);
       setCivicInfo(response.data);
     } catch (error) {
