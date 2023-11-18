@@ -150,7 +150,7 @@ const Dashboard = () => {
           </table>
         </div>
       </div>
-      <VotingInfoTool />
+      {/* <VotingInfoTool /> */}
     </>
   );
 };
