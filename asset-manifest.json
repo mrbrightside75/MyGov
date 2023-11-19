@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MyGov/static/css/main.8185fbdb.css",
+    "main.js": "/MyGov/static/js/main.c14bd4ac.js",
+    "static/js/787.3b24c185.chunk.js": "/MyGov/static/js/787.3b24c185.chunk.js",
+    "index.html": "/MyGov/index.html",
+    "main.8185fbdb.css.map": "/MyGov/static/css/main.8185fbdb.css.map",
+    "main.c14bd4ac.js.map": "/MyGov/static/js/main.c14bd4ac.js.map",
+    "787.3b24c185.chunk.js.map": "/MyGov/static/js/787.3b24c185.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8185fbdb.css",
+    "static/js/main.c14bd4ac.js"
+  ]
+}
