@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import VotingInfoTool from "./VotingInfoComponent";
+// import VotingInfoTool from "./VotingInfoComponent";
 export const address = "";
 const Dashboard = () => {
   return (
@@ -12,7 +12,7 @@ const Dashboard = () => {
         {/* <!--Profile Card--> */}
         <div id="profile-card" className="col-5">
           <div id="profile-pic" className="col-5">
-            <img src="Images/IMG_6076 2.jpg" />
+            <img src="Images/IMG_6076 2.jpg" alt=" " />
           </div>
           <div id="profile-card-info" className="col-5">
             <div id="profile-card-name" className="row">

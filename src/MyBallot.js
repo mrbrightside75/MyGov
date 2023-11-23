@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import "./MyBallot.css";
 import React, { useState } from "react";
-import BallotComponent from "./BallotComponent";
+// import BallotComponent from "./BallotComponent";
 import RepresentativeComponent from "./RepresentativeComponent.js";
 import { address as initialAddress } from "./Dashboard.js";
 
