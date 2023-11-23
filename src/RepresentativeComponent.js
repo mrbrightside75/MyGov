@@ -9,9 +9,9 @@ const RepresentativeComponent = ({ address }) => {
     try {
       // Updated the API endpoint to backend server's endpoint
       const response = await axios.get(
-        `https://mygov-back-end.fly.dev/api/representatives`,
+        `https://www.googleapis.com/civicinfo/v2/representatives`,
         {
-          params: { address },
+          params: { key: process.env.REACT_APP_API_KEY, address },
         }
       );
       console.log(response.data);
