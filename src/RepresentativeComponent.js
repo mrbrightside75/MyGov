@@ -25,7 +25,7 @@ const RepresentativeComponent = ({ address }) => {
     if (address) {
       fetchCivicInfo();
     }
-  }, [address]);
+  }, [address, fetchCivicInfo]);
 
   // useEffect(() => {
   //   fetchCivicInfo();
