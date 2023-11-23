@@ -45,9 +45,9 @@ const Dashboard = () => {
               />
               <div className="card-body bg-dark">
                 <h5 className="card-title text-light">Card title</h5>
-                <a href="#" className="btn btn-primary">
+                {/* <a href="#" className="btn btn-primary">
                   Go somewhere
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -64,9 +64,9 @@ const Dashboard = () => {
               />
               <div className="card-body bg-dark">
                 <h5 className="card-title text-light">Card title</h5>
-                <a href="#" className="btn btn-primary">
+                {/* <a href="#" className="btn btn-primary">
                   Go somewhere
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -83,9 +83,9 @@ const Dashboard = () => {
               />
               <div className="card-body bg-dark">
                 <h5 className="card-title text-light">Card title</h5>
-                <a href="#" className="btn btn-primary">
+                {/* <a href="#" className="btn btn-primary">
                   Go somewhere
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
