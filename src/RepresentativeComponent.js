@@ -29,7 +29,7 @@ const RepresentativeComponent = ({ address }) => {
 
   useEffect(() => {
     fetchCivicInfo();
-  }, [address]);
+  }, [address, fetchCivicInfo]);
 
   const getPartyClass = (party) => {
     if (party === "Republican Party") {
