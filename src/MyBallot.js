@@ -33,10 +33,10 @@ const MyBallot = () => {
           MN 55082
         </p>
       </div>
-      <div id="ballotComponentRow" className="row">
+      {/* <div id="ballotComponentRow" className="row">
         <h1>Your Ballot</h1>
-        <BallotComponent address={address} /> {/* Pass the address prop here */}
-      </div>
+        <BallotComponent address={address} /> 
+      </div> */}
       <div id="representativeComponentRow" className="row">
         <h1>Your Elected Officials</h1>
         <RepresentativeComponent id="repComponentElement" address={address} />

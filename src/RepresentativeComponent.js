@@ -17,7 +17,7 @@ const RepresentativeComponent = ({ address }) => {
       console.log(response.data);
       setCivicInfo(response.data);
     } catch (error) {
-      console.error("Error fetching civic info:", error);
+      console.error("FRONTEND Error fetching civic info:", error);
     }
   };
 
