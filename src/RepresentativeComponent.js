@@ -1,12 +1,13 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./RepresentativeComponent.css";
 
 const RepresentativeComponent = ({ address }) => {
   const [civicInfo, setCivicInfo] = useState(null);
 
-  const fetchCivicInfo = useCallback(async () => {
+  const fetchCivicInfo = async () => {
     try {
+      // Updated the API endpoint to backend server's endpoint
       const response = await axios.get(
         `https://www.googleapis.com/civicinfo/v2/representatives`,
         {
@@ -18,13 +19,17 @@ const RepresentativeComponent = ({ address }) => {
     } catch (error) {
       console.error("FRONTEND Error fetching civic info:", error);
     }
-  }, [address, process.env.REACT_APP_API_KEY]); // Dependencies for useCallback
+  };
 
   useEffect(() => {
     if (address) {
       fetchCivicInfo();
     }
-  }, [address, fetchCivicInfo]); // Dependencies for useEffect
+  }, [address, fetchCivicInfo]);
+
+  // useEffect(() => {
+  //   fetchCivicInfo();
+  // }, [address]);
 
   const getPartyClass = (party) => {
     if (party === "Republican Party") {
